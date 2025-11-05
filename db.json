@@ -1,0 +1,532 @@
+{
+  "employees": [
+    {
+      "id": 1,
+      "name": "Nguyễn Văn A",
+      "email": "nguyenvana@example.com",
+      "phone": "0987654321",
+      "department": "Kỹ thuật",
+      "joinDate": "2023-01-15"
+    },
+    {
+      "id": 2,
+      "name": "Trần Thị B",
+      "email": "tranthib@example.com",
+      "phone": "0912345678",
+      "department": "Sản phẩm",
+      "joinDate": "2022-12-10"
+    },
+    {
+      "id": 3,
+      "name": "Lê Văn C",
+      "email": "levanc@example.com",
+      "phone": "0971122334",
+      "department": "Kinh doanh",
+      "joinDate": "2023-04-01"
+    },
+    {
+      "id": 4,
+      "name": "Phạm Thị D",
+      "email": "phamthid@example.com",
+      "phone": "0933445566",
+      "department": "Marketing",
+      "joinDate": "2023-05-20"
+    },
+    {
+      "id": 5,
+      "name": "Võ Quang E",
+      "email": "voquange@example.com",
+      "phone": "0967788990",
+      "department": "Nhân sự",
+      "joinDate": "2023-02-11"
+    },
+    {
+      "id": 6,
+      "name": "Đỗ Thị F",
+      "email": "dothif@example.com",
+      "phone": "0909988776",
+      "department": "Tài chính",
+      "joinDate": "2022-11-28"
+    },
+    {
+      "id": 8,
+      "name": "Đặng Thị H",
+      "email": "dangthih@example.com",
+      "phone": "0911223344",
+      "department": "Sản phẩm",
+      "joinDate": "2023-06-05"
+    },
+    {
+      "id": 9,
+      "name": "Hoàng Văn I",
+      "email": "hoangvani@example.com",
+      "phone": "0955667788",
+      "department": "Kinh doanh",
+      "joinDate": "2023-01-25"
+    },
+    {
+      "id": 10,
+      "name": "Ngô Thị K",
+      "email": "ngothik@example.com",
+      "phone": "0944332211",
+      "department": "Marketing",
+      "joinDate": "2022-10-21"
+    },
+    {
+      "id": 11,
+      "name": "Phan Văn L",
+      "email": "phanvanl@example.com",
+      "phone": "0933004455",
+      "department": "Nhân sự",
+      "joinDate": "2023-07-03"
+    },
+    {
+      "id": 12,
+      "name": "Tạ Thị M",
+      "email": "tathem@example.com",
+      "phone": "0977665544",
+      "department": "Tài chính",
+      "joinDate": "2023-02-02"
+    },
+    {
+      "id": 13,
+      "name": "Dương Văn N",
+      "email": "duongvann@example.com",
+      "phone": "0988111222",
+      "department": "Kỹ thuật",
+      "joinDate": "2023-03-09"
+    },
+    {
+      "id": 14,
+      "name": "Vũ Thị O",
+      "email": "vuthio@example.com",
+      "phone": "0911998877",
+      "department": "Sản phẩm",
+      "joinDate": "2023-04-14"
+    },
+    {
+      "id": 15,
+      "name": "Trịnh Văn P",
+      "email": "trinhvanp@example.com",
+      "phone": "0933777666",
+      "department": "Kinh doanh",
+      "joinDate": "2023-05-30"
+    },
+    {
+      "id": 16,
+      "name": "Cao Thị Q",
+      "email": "caothiq@example.com",
+      "phone": "0966554433",
+      "department": "Marketing",
+      "joinDate": "2022-09-12"
+    },
+    {
+      "id": 17,
+      "name": "Tô Văn R",
+      "email": "tovanr@example.com",
+      "phone": "0955443322",
+      "department": "Nhân sự",
+      "joinDate": "2023-01-08"
+    },
+    {
+      "id": 18,
+      "name": "Mai Thị S",
+      "email": "maithis@example.com",
+      "phone": "0944221100",
+      "department": "Tài chính",
+      "joinDate": "2023-06-18"
+    },
+    {
+      "id": 19,
+      "name": "Hà Văn T",
+      "email": "havant@example.com",
+      "phone": "0932887766",
+      "department": "Kỹ thuật",
+      "joinDate": "2023-07-22"
+    },
+    {
+      "id": 20,
+      "name": "La Thị U",
+      "email": "lathiu@example.com",
+      "phone": "0977552211",
+      "department": "Sản phẩm",
+      "joinDate": "2023-02-25"
+    },
+    {
+      "id": 21,
+      "name": "Quách Văn V",
+      "email": "quachvanv@example.com",
+      "phone": "0987333444",
+      "department": "Kinh doanh",
+      "joinDate": "2022-12-02"
+    },
+    {
+      "id": 22,
+      "name": "Hồ Thị W",
+      "email": "hothiw@example.com",
+      "phone": "0911456789",
+      "department": "Marketing",
+      "joinDate": "2023-03-27"
+    },
+    {
+      "id": 23,
+      "name": "Đoàn Văn X",
+      "email": "doanvanx@example.com",
+      "phone": "0933999000",
+      "department": "Nhân sự",
+      "joinDate": "2023-04-07"
+    },
+    {
+      "id": 24,
+      "name": "Tống Thị Y",
+      "email": "tongthiy@example.com",
+      "phone": "0955778899",
+      "department": "Tài chính",
+      "joinDate": "2022-11-15"
+    },
+    {
+      "id": 25,
+      "name": "Đinh Văn Z",
+      "email": "dinhvanz@example.com",
+      "phone": "0944667788",
+      "department": "Kỹ thuật",
+      "joinDate": "2023-05-11"
+    },
+    {
+      "id": 26,
+      "name": "Nguyễn Thị An",
+      "email": "nguyenthian@example.com",
+      "phone": "0987123456",
+      "department": "Kỹ thuật",
+      "joinDate": "2023-08-01"
+    },
+    {
+      "id": 27,
+      "name": "Trần Văn Bình",
+      "email": "tranvanbinh@example.com",
+      "phone": "0912234567",
+      "department": "Sản phẩm",
+      "joinDate": "2023-07-15"
+    },
+    {
+      "id": 28,
+      "name": "Lê Thị Cúc",
+      "email": "lethicuc@example.com",
+      "phone": "0973345678",
+      "department": "Kinh doanh",
+      "joinDate": "2023-06-20"
+    },
+    {
+      "id": 29,
+      "name": "Phạm Văn Đức",
+      "email": "phamvanduc@example.com",
+      "phone": "0934456789",
+      "department": "Marketing",
+      "joinDate": "2023-05-10"
+    },
+    {
+      "id": 30,
+      "name": "Võ Thị Em",
+      "email": "vothem@example.com",
+      "phone": "0965567890",
+      "department": "Nhân sự",
+      "joinDate": "2023-04-25"
+    },
+    {
+      "id": 31,
+      "name": "Đỗ Văn Phúc",
+      "email": "dovanphuc@example.com",
+      "phone": "0906678901",
+      "department": "Tài chính",
+      "joinDate": "2023-03-12"
+    },
+    {
+      "name": "Bùi Thị Giang update",
+      "email": "buithigiang@example.com",
+      "phone": "0987789012",
+      "department": "Kỹ thuật",
+      "joinDate": "2023-02-18",
+      "id": 32
+    },
+    {
+      "id": 33,
+      "name": "Đặng Văn Hải",
+      "email": "dangvanhai@example.com",
+      "phone": "0918890123",
+      "department": "Sản phẩm",
+      "joinDate": "2023-01-05"
+    },
+    {
+      "id": 34,
+      "name": "Hoàng Thị Hoa",
+      "email": "hoangthihoa@example.com",
+      "phone": "0959901234",
+      "department": "Kinh doanh",
+      "joinDate": "2022-12-20"
+    },
+    {
+      "id": 35,
+      "name": "Ngô Văn Hùng",
+      "email": "ngovanhung@example.com",
+      "phone": "0940012345",
+      "department": "Marketing",
+      "joinDate": "2022-11-30"
+    },
+    {
+      "id": 36,
+      "name": "Phan Thị Lan",
+      "email": "phanthilan@example.com",
+      "phone": "0931123456",
+      "department": "Nhân sự",
+      "joinDate": "2022-10-15"
+    },
+    {
+      "id": 37,
+      "name": "Tạ Văn Long",
+      "email": "tavanlong@example.com",
+      "phone": "0972234567",
+      "department": "Tài chính",
+      "joinDate": "2022-09-08"
+    },
+    {
+      "id": 38,
+      "name": "Dương Thị Mai",
+      "email": "duongthimai@example.com",
+      "phone": "0983345678",
+      "department": "Kỹ thuật",
+      "joinDate": "2022-08-22"
+    },
+    {
+      "id": 39,
+      "name": "Vũ Văn Nam",
+      "email": "vuvannam@example.com",
+      "phone": "0914456789",
+      "department": "Sản phẩm",
+      "joinDate": "2022-07-14"
+    },
+    {
+      "id": 40,
+      "name": "Trịnh Thị Oanh",
+      "email": "trinhthioanh@example.com",
+      "phone": "0955567890",
+      "department": "Kinh doanh",
+      "joinDate": "2022-06-05"
+    },
+    {
+      "id": 41,
+      "name": "Cao Văn Phong",
+      "email": "caovanphong@example.com",
+      "phone": "0966678901",
+      "department": "Marketing",
+      "joinDate": "2022-05-18"
+    },
+    {
+      "id": 42,
+      "name": "Tô Thị Quỳnh",
+      "email": "tothiquynh@example.com",
+      "phone": "0907789012",
+      "department": "Nhân sự",
+      "joinDate": "2022-04-10"
+    },
+    {
+      "id": 43,
+      "name": "Mai Văn Sơn",
+      "email": "maivanson@example.com",
+      "phone": "0988890123",
+      "department": "Tài chính",
+      "joinDate": "2022-03-25"
+    },
+    {
+      "id": 44,
+      "name": "Hà Thị Tâm",
+      "email": "hathitam@example.com",
+      "phone": "0919901234",
+      "department": "Kỹ thuật",
+      "joinDate": "2022-02-14"
+    },
+    {
+      "id": 45,
+      "name": "La Văn Tuấn",
+      "email": "lavantuan@example.com",
+      "phone": "0940012345",
+      "department": "Sản phẩm",
+      "joinDate": "2022-01-08"
+    },
+    {
+      "id": 46,
+      "name": "Quách Thị Uyên",
+      "email": "quachthiyen@example.com",
+      "phone": "0931123456",
+      "department": "Kinh doanh",
+      "joinDate": "2021-12-20"
+    },
+    {
+      "id": 47,
+      "name": "Hồ Văn Vinh",
+      "email": "hovanvinh@example.com",
+      "phone": "0972234567",
+      "department": "Marketing",
+      "joinDate": "2021-11-12"
+    },
+    {
+      "id": 48,
+      "name": "Đoàn Thị Xuân",
+      "email": "doanthixuan@example.com",
+      "phone": "0983345678",
+      "department": "Nhân sự",
+      "joinDate": "2021-10-05"
+    },
+    {
+      "id": 49,
+      "name": "Tống Văn Yên",
+      "email": "tongvanyen@example.com",
+      "phone": "0914456789",
+      "department": "Tài chính",
+      "joinDate": "2021-09-18"
+    },
+    {
+      "id": 50,
+      "name": "Nguyễn Văn Bảo",
+      "email": "nguyenvanbao@example.com",
+      "phone": "0955567890",
+      "department": "Kỹ thuật",
+      "joinDate": "2021-08-30"
+    },
+    {
+      "id": 51,
+      "name": "Trần Thị Chi",
+      "email": "tranthichi@example.com",
+      "phone": "0966678901",
+      "department": "Sản phẩm",
+      "joinDate": "2021-07-22"
+    },
+    {
+      "id": 52,
+      "name": "Lê Văn Đạt",
+      "email": "levandat@example.com",
+      "phone": "0907789012",
+      "department": "Kinh doanh",
+      "joinDate": "2021-06-15"
+    },
+    {
+      "id": 53,
+      "name": "Phạm Thị Hạnh",
+      "email": "phamthihanh@example.com",
+      "phone": "0988890123",
+      "department": "Marketing",
+      "joinDate": "2021-05-08"
+    },
+    {
+      "id": 54,
+      "name": "Võ Văn Khoa",
+      "email": "vovankhoa@example.com",
+      "phone": "0919901234",
+      "department": "Nhân sự",
+      "joinDate": "2021-04-20"
+    },
+    {
+      "id": 55,
+      "name": "Đỗ Thị Linh",
+      "email": "dothilinh@example.com",
+      "phone": "0940012345",
+      "department": "Tài chính",
+      "joinDate": "2021-03-12"
+    },
+    {
+      "id": 56,
+      "name": "Bùi Văn Minh",
+      "email": "buivanminh@example.com",
+      "phone": "0931123456",
+      "department": "Kỹ thuật",
+      "joinDate": "2021-02-25"
+    },
+    {
+      "id": 57,
+      "name": "Đặng Thị Nga",
+      "email": "dangthinga@example.com",
+      "phone": "0972234567",
+      "department": "Sản phẩm",
+      "joinDate": "2021-01-18"
+    },
+    {
+      "id": 58,
+      "name": "Hoàng Văn Quang",
+      "email": "hoangvanquang@example.com",
+      "phone": "0983345678",
+      "department": "Kinh doanh",
+      "joinDate": "2020-12-10"
+    },
+    {
+      "id": 59,
+      "name": "Ngô Thị Thảo",
+      "email": "ngothithao@example.com",
+      "phone": "0914456789",
+      "department": "Marketing",
+      "joinDate": "2020-11-03"
+    },
+    {
+      "id": 60,
+      "name": "Phan Văn Thắng",
+      "email": "phanvanthang@example.com",
+      "phone": "0955567890",
+      "department": "Nhân sự",
+      "joinDate": "2020-10-16"
+    },
+    {
+      "id": 61,
+      "name": "Tạ Thị Vân",
+      "email": "tathivan@example.com",
+      "phone": "0966678901",
+      "department": "Tài chính",
+      "joinDate": "2020-09-28"
+    },
+    {
+      "id": 62,
+      "name": "Dương Văn Việt",
+      "email": "duongvanviet@example.com",
+      "phone": "0907789012",
+      "department": "Kỹ thuật",
+      "joinDate": "2020-08-11"
+    },
+    {
+      "id": 63,
+      "name": "Vũ Thị Yến",
+      "email": "vuthiyen@example.com",
+      "phone": "0988890123",
+      "department": "Sản phẩm",
+      "joinDate": "2020-07-24"
+    },
+    {
+      "id": 64,
+      "name": "Trịnh Văn Đông",
+      "email": "trinhvandong@example.com",
+      "phone": "0919901234",
+      "department": "Kinh doanh",
+      "joinDate": "2020-06-06"
+    },
+    {
+      "id": 65,
+      "name": "Cao Thị Hương",
+      "email": "caothihuong@example.com",
+      "phone": "0940012345",
+      "department": "Marketing",
+      "joinDate": "2020-05-19"
+    },
+    {
+      "name": "Nguyễn Minh Tiến update",
+      "email": "nguyenminhtienhy98@gmail.com",
+      "phone": "0966199871",
+      "department": "Kỹ thuật",
+      "joinDate": "1998-11-09",
+      "id": 66
+    },
+    {
+      "name": "Nguyễn Minh Tiến",
+      "email": "nguyenminhtienhy98@gmail.comnguyen",
+      "phone": "0123456789",
+      "department": "Kỹ thuật",
+      "joinDate": "2025-11-05",
+      "id": 67
+    }
+  ]
+}

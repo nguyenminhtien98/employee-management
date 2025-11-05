@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import type { ReactNode } from "react";
 
 export type SortOrder = "asc" | "desc";
@@ -21,7 +22,7 @@ interface TableProps<T> {
   rowKey?: (row: T, index: number) => string | number;
 }
 
-export default function Table<T extends Record<string, unknown>>({
+export default function Table<T extends object>({
   columns,
   data,
   sortKey,
@@ -63,7 +64,7 @@ export default function Table<T extends Record<string, unknown>>({
   const renderCell = (col: TableColumn<T>, row: T) => {
     const content = col.render
       ? col.render(row)
-      : (row[String(col.key)] as ReactNode);
+      : ((row as any)[String(col.key)] as ReactNode);
 
     if (col.truncate && typeof content === "string") {
       const style: React.CSSProperties = {

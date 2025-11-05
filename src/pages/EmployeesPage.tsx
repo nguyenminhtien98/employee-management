@@ -12,6 +12,7 @@ import Button from "../components/common/Button";
 import Input from "../components/common/Input";
 import Dropdown from "../components/common/Dropdown";
 import Label from "../components/common/Label";
+import { getEmployeeTableColumns } from "../constants/employeeTable.tsx";
 import TableSkeleton from "../components/loading/TableSkeleton";
 
 export default function EmployeesPage() {
@@ -93,6 +94,15 @@ export default function EmployeesPage() {
     setDetailModalOpen(true);
   };
 
+  const columns = getEmployeeTableColumns(
+    (e) => {
+      setEditing(e);
+      setModalOpen(true);
+    },
+    deleteEmployee,
+    handleViewDetail
+  );
+
   return (
     <div className="page-container">
       <h2 className="page-title">Quản lý Nhân viên</h2>
@@ -146,7 +156,7 @@ export default function EmployeesPage() {
       </div>
 
       {loading ? (
-        <TableSkeleton columns={7} rows={limit} />
+        <TableSkeleton columns={columns} rows={limit} />
       ) : error ? (
         <div className="error-container">
           <div className="error-message">{error}</div>

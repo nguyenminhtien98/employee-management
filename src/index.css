@@ -228,7 +228,7 @@ h1 {
   width: 100%;
   min-width: 800px;
   border-collapse: collapse;
-  table-layout: auto;
+  table-layout: fixed;
   color: black;
 }
 

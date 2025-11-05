@@ -1,21 +1,18 @@
 import Skeleton from "./Skeleton";
 
 interface TableSkeletonProps {
-  columns: number;
+  columns: { width?: string | number; maxWidth?: string | number }[];
   rows?: number;
 }
 
-export default function TableSkeleton({
-  columns,
-  rows = 5,
-}: TableSkeletonProps) {
+export default function TableSkeleton({ columns, rows = 5 }: TableSkeletonProps) {
   return (
     <div className="skeleton-table">
       <table className="table">
         <thead>
           <tr>
-            {Array.from({ length: columns }).map((_, idx) => (
-              <th key={idx}>
+            {columns.map((col, idx) => (
+              <th key={idx} style={{ width: col.width, maxWidth: col.maxWidth }}>
                 <Skeleton height="16px" />
               </th>
             ))}
@@ -24,12 +21,9 @@ export default function TableSkeleton({
         <tbody>
           {Array.from({ length: rows }).map((_, rowIdx) => (
             <tr key={rowIdx}>
-              {Array.from({ length: columns }).map((_, colIdx) => (
-                <td key={colIdx}>
-                  <Skeleton
-                    height="20px"
-                    width={colIdx === 0 ? "40px" : undefined}
-                  />
+              {columns.map((col, colIdx) => (
+                <td key={colIdx} style={{ maxWidth: col.maxWidth }}>
+                  <Skeleton height="20px" />
                 </td>
               ))}
             </tr>

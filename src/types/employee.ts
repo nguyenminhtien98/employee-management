@@ -5,6 +5,7 @@ export interface Employee {
   phone: string;
   department: string;
   joinDate: string;
+  [key: string]: unknown;
 }
 
 export type EmployeeCreateInput = Omit<Employee, "id">;

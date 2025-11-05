@@ -89,6 +89,17 @@ export async function getEmployeeById(id: number): Promise<Employee> {
 export async function createEmployee(
   payload: EmployeeCreateInput
 ): Promise<Employee> {
+  const searchParams = new URLSearchParams();
+  searchParams.set("name", payload.name);
+  searchParams.set("email", payload.email);
+  searchParams.set("department", payload.department);
+  searchParams.set("phone", payload.phone || "");
+
+  const checkRes = await apiClient.get(`/employees?${searchParams.toString()}`);
+
+  if (Array.isArray(checkRes.data) && checkRes.data.length > 0) {
+    throw new Error("Nhân viên đã tồn tại trong hệ thống!");
+  }
   const maxIdRes = await apiClient.get(
     "/employees?_sort=id&_order=desc&_limit=1"
   );

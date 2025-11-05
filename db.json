@@ -513,20 +513,12 @@
       "joinDate": "2020-05-19"
     },
     {
-      "name": "Nguyễn Minh Tiến update",
+      "name": "Nguyễn Minh Tiến",
       "email": "nguyenminhtienhy98@gmail.com",
       "phone": "0966199871",
       "department": "Kỹ thuật",
-      "joinDate": "1998-11-09",
-      "id": 66
-    },
-    {
-      "name": "Nguyễn Minh Tiến",
-      "email": "nguyenminhtienhy98@gmail.comnguyen",
-      "phone": "0123456789",
-      "department": "Kỹ thuật",
       "joinDate": "2025-11-05",
-      "id": 67
+      "id": 66
     }
   ]
 }

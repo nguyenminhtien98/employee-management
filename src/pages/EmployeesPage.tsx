@@ -1,14 +1,10 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import { useEffect, useState } from "react";
 import EmployeeTable from "../components/EmployeeTable";
 import EmployeeFormModal from "../components/EmployeeFormModal";
 import EmployeeDetailModal from "../components/EmployeeDetailModal";
 import { useEmployees } from "../hooks/useEmployees";
 import { useDebounce } from "../hooks/useDebounce";
-import {
-  createEmployee,
-  deleteEmployee,
-  updateEmployee,
-} from "../services/employees";
 import type { Employee } from "../types/employee";
 import type { EmployeeFormValues } from "../schemas/employee";
 import { DEPARTMENTS } from "../constants";
@@ -33,7 +29,11 @@ export default function EmployeesPage() {
     sort,
     order,
     setSorting,
-    refresh,
+    // ⚡ CRUD operations từ hook
+    createEmployee,
+    updateEmployee,
+    deleteEmployee,
+    submitting,
   } = useEmployees();
 
   const [searchName, setSearchName] = useState<string>("");
@@ -55,7 +55,6 @@ export default function EmployeesPage() {
   const [detailModalOpen, setDetailModalOpen] = useState(false);
   const [editing, setEditing] = useState<Employee | null>(null);
   const [viewingEmployee, setViewingEmployee] = useState<Employee | null>(null);
-  const [submitting, setSubmitting] = useState(false);
   const [limitInput, setLimitInput] = useState<string>(String(limit));
 
   useEffect(() => {
@@ -67,66 +66,25 @@ export default function EmployeesPage() {
     ...DEPARTMENTS.map((d) => ({ value: d, label: d })),
   ];
 
+  // ⚡ Simplified handlers
   const handleCreate = async (values: EmployeeFormValues) => {
-    setSubmitting(true);
     try {
-      const today = new Date();
-      const year = today.getFullYear();
-      const month = String(today.getMonth() + 1).padStart(2, "0");
-      const day = String(today.getDate()).padStart(2, "0");
-      const currentDate = `${year}-${month}-${day}`;
-
-      const phoneValue =
-        values.phone &&
-        typeof values.phone === "string" &&
-        values.phone.trim() !== ""
-          ? values.phone.trim()
-          : "";
-
-      const createValues = {
-        name: values.name,
-        email: values.email,
-        phone: phoneValue,
-        department: values.department,
-        joinDate: currentDate,
-      };
-
-      await createEmployee(createValues);
+      await createEmployee(values);
       setModalOpen(false);
       setEditing(null);
-      await refresh();
     } catch (err) {
-      alert(err instanceof Error ? err.message : "Không thể thêm nhân viên");
-    } finally {
-      setSubmitting(false);
+      // Error already handled in hook with toast
     }
   };
 
   const handleUpdate = async (values: EmployeeFormValues) => {
     if (!editing) return;
-    setSubmitting(true);
     try {
       await updateEmployee(editing.id, values);
       setModalOpen(false);
       setEditing(null);
-      await refresh();
     } catch (err) {
-      alert(
-        err instanceof Error ? err.message : "Không thể cập nhật nhân viên"
-      );
-    } finally {
-      setSubmitting(false);
-    }
-  };
-
-  const handleDelete = async (employee: Employee) => {
-    const ok = confirm(`Bạn có chắc muốn xóa nhân viên ${employee.name}?`);
-    if (!ok) return;
-    try {
-      await deleteEmployee(employee.id);
-      await refresh();
-    } catch (err) {
-      alert(err instanceof Error ? err.message : "Không thể xóa nhân viên");
+      // Error already handled in hook with toast
     }
   };
 
@@ -183,8 +141,8 @@ export default function EmployeesPage() {
         {loading
           ? "Đang tải..."
           : error
-          ? `Lỗi: ${error}`
-          : `Tổng: ${total} nhân viên`}
+            ? `Lỗi: ${error}`
+            : `Tổng: ${total} nhân viên`}
       </div>
 
       {loading ? (
@@ -203,7 +161,7 @@ export default function EmployeesPage() {
             setEditing(e);
             setModalOpen(true);
           }}
-          onDelete={handleDelete}
+          onDelete={deleteEmployee}
           onViewDetail={handleViewDetail}
           sort={sort}
           order={order}

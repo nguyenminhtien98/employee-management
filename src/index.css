@@ -636,3 +636,47 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+
+Toastify__toast-container {
+  z-index: 9999;
+}
+
+.Toastify__toast {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  padding: 16px;
+}
+
+.Toastify__toast--success {
+  background: #10b981;
+}
+
+.Toastify__toast--error {
+  background: #ef4444;
+}
+
+.Toastify__toast--info {
+  background: #3b82f6;
+}
+
+.Toastify__toast--warning {
+  background: #f59e0b;
+}
+
+.Toastify__toast-body {
+  padding: 0;
+  font-size: 14px;
+}
+
+.Toastify__progress-bar {
+  height: 3px;
+}
+
+.Toastify__close-button {
+  opacity: 0.7;
+}
+
+.Toastify__close-button:hover {
+  opacity: 1;
+}

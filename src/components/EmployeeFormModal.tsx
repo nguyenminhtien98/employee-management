@@ -28,79 +28,84 @@ export default function EmployeeFormModal({
   submitting,
 }: Props) {
   const {
-    register,
+    control,
     handleSubmit,
     reset,
-    watch,
-    control,
-    clearErrors,
-    formState: { errors },
+    formState: { errors, isValid, isDirty },
   } = useForm<EmployeeFormValues>({
     resolver: zodResolver(employeeFormSchema),
+    mode: "onChange",
     defaultValues: {
       name: "",
       email: "",
       phone: "",
       department: "",
       joinDate: "",
-      ...defaultValues,
     },
   });
 
-  const watchedFields = watch();
-  const hasValues =
-    watchedFields.name && watchedFields.email && watchedFields.department;
-
-  const isFormValid = hasValues && Object.keys(errors).length === 0;
-
   useEffect(() => {
-    reset({
-      name: defaultValues?.name || "",
-      email: defaultValues?.email || "",
-      phone: defaultValues?.phone || "",
-      department: defaultValues?.department || "",
-      joinDate: defaultValues?.joinDate || "",
-    });
     if (defaultValues) {
-      clearErrors();
+      reset({
+        name: defaultValues.name || "",
+        email: defaultValues.email || "",
+        phone: defaultValues.phone || "",
+        department: defaultValues.department || "",
+        joinDate: defaultValues.joinDate || "",
+      });
     }
-  }, [defaultValues, reset, clearErrors]);
+  }, [defaultValues, reset]);
 
   useEffect(() => {
-    if (!open) {
-      if (!defaultValues) {
-        reset({
-          name: "",
-          email: "",
-          phone: "",
-          department: "",
-          joinDate: "",
-        });
-      }
-      clearErrors();
+    if (!open && !defaultValues) {
+      reset({
+        name: "",
+        email: "",
+        phone: "",
+        department: "",
+        joinDate: "",
+      });
     }
-  }, [open, defaultValues, reset, clearErrors]);
+  }, [open, defaultValues, reset]);
 
   return (
     <Modal open={open} onClose={onClose} title={title}>
       <form onSubmit={handleSubmit(async (vals) => await onSubmit(vals))}>
         <div className="form-row">
           <Label requiredMark>Tên</Label>
-          <Input {...register("name")} placeholder="Nguyễn Văn A" />
+          <Controller
+            name="name"
+            control={control}
+            render={({ field }) => (
+              <Input {...field} placeholder="Nguyễn Văn A" />
+            )}
+          />
           {errors.name && (
             <span className="form-error">{errors.name.message}</span>
           )}
         </div>
         <div className="form-row">
           <Label requiredMark>Email</Label>
-          <Input {...register("email")} placeholder="email@company.com" />
+          <Controller
+            name="email"
+            control={control}
+            render={({ field }) => (
+              <Input {...field} placeholder="email@company.com" />
+            )}
+          />
           {errors.email && (
             <span className="form-error">{errors.email.message}</span>
           )}
         </div>
         <div className="form-row">
           <Label>SĐT</Label>
-          <Input {...register("phone")} placeholder="0987123456" />
+          <Controller
+            name="phone"
+            control={control}
+            render={({ field }) => (
+              <Input {...field} placeholder="0987123456" />
+            )}
+          />
           {errors.phone && (
             <span className="form-error">{errors.phone.message}</span>
           )}
@@ -127,13 +132,10 @@ export default function EmployeeFormModal({
           )}
         </div>
         <div className="form-actions">
-          <Button type="button" onClick={onClose} disabled={submitting}>
-            Hủy
-          </Button>
           <Button
             type="submit"
             variant="primary"
-            disabled={!isFormValid || submitting}
+            disabled={submitting || (defaultValues ? !isDirty || !isValid : !isDirty)}
           >
             {submitting ? "Đang lưu..." : "Lưu"}
           </Button>

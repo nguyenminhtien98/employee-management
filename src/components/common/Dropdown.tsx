@@ -51,10 +51,9 @@ export default function Dropdown({
       menu.style.width = `${rect.width}px`;
       menu.style.minWidth = `${rect.width}px`;
 
-      if (
-        rect.bottom + menuRect.height > viewportHeight &&
-        rect.top > viewportHeight / 2
-      ) {
+      const wouldOverflowBottom = rect.bottom + menuRect.height > viewportHeight;
+
+      if (wouldOverflowBottom) {
         menu.style.bottom = "100%";
         menu.style.top = "auto";
         menu.style.marginBottom = "4px";
